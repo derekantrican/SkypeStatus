@@ -84,9 +84,9 @@
             this.checkBoxGFW.AutoSize = true;
             this.checkBoxGFW.Location = new System.Drawing.Point(16, 107);
             this.checkBoxGFW.Name = "checkBoxGFW";
-            this.checkBoxGFW.Size = new System.Drawing.Size(183, 30);
+            this.checkBoxGFW.Size = new System.Drawing.Size(161, 30);
             this.checkBoxGFW.TabIndex = 4;
-            this.checkBoxGFW.Text = "Enable functionality for GFW\r\nChrome Extension (Coming Soon)\r\n";
+            this.checkBoxGFW.Text = "Enable functionality for GFW\r\nChrome Extension\r\n";
             this.checkBoxGFW.UseVisualStyleBackColor = true;
             // 
             // linkLabelGFW
