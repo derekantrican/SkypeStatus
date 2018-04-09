@@ -192,7 +192,7 @@ namespace SkypeStatus
             string apiEndpoint = "https://slack.com/api/";
             string method = "users.profile.set";
             string completeUrl = apiEndpoint + method;
-            string token = "xoxp-65595749249-84580869537-171157337093-54a04a8915a3c0ba0a71cf73f395b195";
+            string token = "SLACKTOKEN";
 
             JObject profile;
 
@@ -216,7 +216,7 @@ namespace SkypeStatus
             NameValueCollection payload = new NameValueCollection()
             {
                 {"token", token },
-                {"user", "U2GH2RKFT" },
+                {"user", "USERID" },
                 {"profile", profile.ToString() }
             };
 
