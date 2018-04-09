@@ -98,12 +98,19 @@ namespace SkypeStatus
 
         private void setStatus(ContactAvailability newStatus)
         {
-            var infoToPublish = new Dictionary<PublishableContactInformationType, object>();
-            infoToPublish.Add(PublishableContactInformationType.Availability, newStatus);
+            try
+            {
+                var infoToPublish = new Dictionary<PublishableContactInformationType, object>();
+                infoToPublish.Add(PublishableContactInformationType.Availability, newStatus);
 
-            var theClient = LyncClient.GetClient();
-            var self = theClient.Self;
-            self.BeginPublishContactInformation(infoToPublish, EndPublishContactInformation, self);
+                var theClient = LyncClient.GetClient();
+                var self = theClient.Self;
+                self.BeginPublishContactInformation(infoToPublish, EndPublishContactInformation, self);
+            }
+            catch
+            {
+                Console.WriteLine("Problem setting Skype for Business status. Is it running?");
+            }
         }
 
         private void EndPublishContactInformation(IAsyncResult ar)
